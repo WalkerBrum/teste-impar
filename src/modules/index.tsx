@@ -1,6 +1,8 @@
-import { SearchCard } from './components';
+import { SearchCard } from './components/search-card';
+import { SearchResults } from './components/search-results';
 
 import { Box } from '@mui/material';
+
 
 export const Main = () => {
     return (
@@ -9,6 +11,7 @@ export const Main = () => {
             margin: '0'
         }}>
             <SearchCard />
+            <SearchResults />
         </Box>
     )
 }
