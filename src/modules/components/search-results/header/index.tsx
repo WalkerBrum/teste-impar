@@ -1,6 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
 
-export const Header = () => {
+interface IHeaderProps {
+    setCreateCardOpen: (boolean) => void;
+}
+
+export const Header: React.FC<IHeaderProps> = ({ setCreateCardOpen }) => {
+
     return (
         <Box sx={{
             display: "flex",
@@ -11,6 +16,7 @@ export const Header = () => {
             <Typography variant='h4' color='#5F1478'>Resultado de busca</Typography>
             <Button 
                 variant='contained'
+                onClick={() => setCreateCardOpen(true)}
                 sx={{
                     backgroundColor:'#E76316',
                     fontSize: '18px',
