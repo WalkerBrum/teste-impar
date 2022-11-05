@@ -1,10 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
 
 interface IHeaderProps {
-    setCreateCardOpen: (boolean) => void;
+    openModal: () => void;
 }
 
-export const Header: React.FC<IHeaderProps> = ({ setCreateCardOpen }) => {
+export const Header: React.FC<IHeaderProps> = ({ openModal }) => {
 
     return (
         <Box sx={{
@@ -13,10 +13,18 @@ export const Header: React.FC<IHeaderProps> = ({ setCreateCardOpen }) => {
             justifyContent: "space-between",
             margin: '40px auto'
         }}> 
-            <Typography variant='h4' color='#5F1478'>Resultado de busca</Typography>
+            <Typography 
+                variant='h3' 
+                color='#5F1478'
+                sx={{
+                    fontSize: '32px'
+                }}
+            >
+                Resultado de busca
+            </Typography>
             <Button 
                 variant='contained'
-                onClick={() => setCreateCardOpen(true)}
+                onClick={openModal}
                 sx={{
                     backgroundColor:'#E76316',
                     fontSize: '18px',

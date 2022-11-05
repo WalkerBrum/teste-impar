@@ -26,13 +26,25 @@ export const Search = () => {
                     padding:'10px'
                 }}
                 placeholder="Digite aqui sua busca..."
-                inputProps={{ 'aria-label': 'search google maps' }}
             />
-            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                <SearchIcon sx={{ 
-                    fontSize: '40px', color:'#A4A4A4', padding: '10px' 
-                }} />
-            </IconButton>
+                <IconButton 
+                        type="button" 
+                        aria-label="search" 
+                        sx={{ 
+                        color:'#A4A4A4',  
+                        height: '100%',
+                        '&:hover': {
+                            backgroundColor: '#e9e9e9',
+                            color: 'black',
+                            fontSize: '10px',
+                        },
+                    }} 
+                >
+                    <SearchIcon sx={{ 
+                        fontSize:"50px",
+                        padding: '10px' 
+                    }} />
+                </IconButton>
         </Paper>
     );  
 }; 

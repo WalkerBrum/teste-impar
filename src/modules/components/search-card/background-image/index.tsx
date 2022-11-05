@@ -31,7 +31,7 @@ export const BackgroundImage = () => {
             <Image
                 src={image}
                 height={261}
-                alt="Walker Lobato"
+                alt='Imagem de fundo'
                 style={{width: '100%', margin: '0'}}
             />
         </Box>

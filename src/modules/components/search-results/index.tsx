@@ -7,12 +7,16 @@ import { Header } from "./header";
 export const SearchResults= () => {
     const [ createCardOpen, setCreateCardOpen ] = useState(false);
 
+    const openModal = () => {
+        setCreateCardOpen(true);
+    }
+
     return (
         <Box sx={{
             width: "70%",
             margin: '0 auto'
         }}>
-            <Header setCreateCardOpen={setCreateCardOpen}/>
+            <Header openModal={openModal}/>
             <CreateCard createCardOpen={createCardOpen}/>
         </Box>
     )
