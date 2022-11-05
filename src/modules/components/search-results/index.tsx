@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { CreateCard } from "./create-card";
 
 import { Header } from "./header";
+import { ShowCard } from "./show-cards";
 
-export const SearchResults= () => {
-    const [ createCardOpen, setCreateCardOpen ] = useState(false);
+export const SearchResults = () => {
+    const [createCardOpen, setCreateCardOpen] = useState(false);
 
     const openModal = () => {
         setCreateCardOpen(true);
@@ -16,8 +17,9 @@ export const SearchResults= () => {
             width: "70%",
             margin: '0 auto'
         }}>
-            <Header openModal={openModal}/>
-            <CreateCard createCardOpen={createCardOpen}/>
+            <Header openModal={openModal} />
+            <ShowCard />
+            <CreateCard createCardOpen={createCardOpen} />
         </Box>
     )
 }

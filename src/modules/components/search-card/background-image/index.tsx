@@ -32,7 +32,7 @@ export const BackgroundImage = () => {
                 src={image}
                 height={261}
                 alt='Imagem de fundo'
-                style={{width: '100%', margin: '0'}}
+                style={{width: '100%'}}
             />
         </Box>
     );

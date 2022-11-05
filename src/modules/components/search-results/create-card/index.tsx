@@ -1,4 +1,4 @@
-import { Drawer, Box, Grid, Typography, Divider, InputBase, IconButton, Button, Snackbar, Alert } from "@mui/material";
+import { Drawer, Box, Grid, Typography, Divider, InputBase, useMediaQuery, Theme, Button, Snackbar, Alert } from "@mui/material";
 
 import Image from 'next/image';
 import image from './image/create-card.png';
@@ -6,11 +6,12 @@ import { useRef, useState } from 'react';
 
 interface ICreateCardProps {
     createCardOpen: boolean;
-    ref: any
+    Ref: boolean;
 }
 
 export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
     const [openAlert, setOpenAlert] = useState(false);
+
     const inputRef = useRef();
 
     const toggleMessage = () => {
@@ -33,12 +34,9 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
                     <Grid xs={12} md={1.4} item>
                         <Image
                             src={image}
-                            height={261}
-                            alt='Imagem de fundo'
-                            style={{
-                                margin: '0', width: '46px',
-                                height: '46px'
-                            }}
+                            width={46}
+                            height={46}
+                            alt='Logo Create Card'
                         />
                     </Grid>
                     <Grid

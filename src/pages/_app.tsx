@@ -1,4 +1,4 @@
-import CssBaseline from '@mui/material/CssBaseline';
+import { CssBaseline, Box } from '@mui/material';
 
 import { AppBar } from '../components/appBar';
 import type { AppProps } from 'next/app';
@@ -7,8 +7,10 @@ import type { AppProps } from 'next/app';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <CssBaseline>
-      <AppBar />
-      <Component {...pageProps} />
+      <Box sx={{backgroundColor: '#F6F4F6', height:'100vh'}}>
+        <AppBar />
+        <Component {...pageProps} />
+      </Box>
     </CssBaseline>
     
   );

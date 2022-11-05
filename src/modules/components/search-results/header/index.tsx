@@ -11,7 +11,7 @@ export const Header: React.FC<IHeaderProps> = ({ openModal }) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            margin: '40px auto'
+            margin: '40px auto 0 auto'
         }}> 
             <Typography 
                 variant='h3' 
