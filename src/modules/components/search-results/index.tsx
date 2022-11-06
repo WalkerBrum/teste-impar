@@ -14,7 +14,7 @@ export const SearchResults = () => {
 
     return (
         <Box sx={{
-            width: "70%",
+            width: "80%",
             margin: '0 auto'
         }}>
             <Header openModal={openModal} />

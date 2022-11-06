@@ -1,15 +1,16 @@
-import { useState } from 'react';
-import { Box, Card, CardContent, CardActions, Grid, Button, Typography, Modal } from "@mui/material";
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'; import Image from 'next/image';
+import { Box, Card, CardContent, CardActions, Button, Typography } from "@mui/material";
+
+ import Image from 'next/image';
 import image from '../svg/icone.svg';
 import trashIcon from '../svg/Icon-trash.svg';
 import editIcon from '../svg/Icon-edit.svg';
 
 interface ICardResultProps {
+    name: string;
     handleDeleteOpen: () => void;
 }
 
-export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen }) => {
+export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name }) => {
     
     return (
         <Card sx={{
@@ -44,9 +45,10 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen }) => 
                 <Typography
                     sx={{
                         fontSize: '16px',
+                        textAlign: 'center',
                     }}
                 >
-                    Walker Brum Lobato Filho
+                    {name}
                 </Typography>
             </CardContent>
 

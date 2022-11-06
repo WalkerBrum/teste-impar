@@ -1,4 +1,4 @@
-import { Main } from '../modules';
+import { Main } from '../modules/main';
 
 export default Main;
 

@@ -149,6 +149,8 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
                     </Box>
                 </Box>
 
+                <Divider sx={{ margin: '51.22px 0 26px 0' }} />
+
                 <Box sx={{
                     display: 'flex',
                     justifyContent: 'end',

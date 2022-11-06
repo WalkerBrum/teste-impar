@@ -11,7 +11,7 @@ export const Search = () => {
             sx={{ 
                  display: 'flex', 
                  alignItems: 'center', 
-                 width: '70%',
+                 width: '80%',
                  position: 'absolute',
                  height: '55px',
                  borderRadius: '8px',
