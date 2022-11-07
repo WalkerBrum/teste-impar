@@ -10,14 +10,14 @@ interface ICreateCardProps {
 }
 
 export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
-    const [openAlert, setOpenAlert] = useState(false);
+    const [openAlertCreateCard, setOpenAlertCreateCard] = useState(false);
 
     const inputRef = useRef();
 
-    const toggleMessage = () => {
-        if (openAlert) return
+    const toggleMessageCreateCard = () => {
+        if (openAlertCreateCard) return
         
-        setOpenAlert((state: boolean) => !state);       
+        setOpenAlertCreateCard((state: boolean) => !state);       
     }
 
     const handleClick = () => {
@@ -28,6 +28,7 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
         <Drawer open={createCardOpen} anchor='right'>
             <Box sx={{
                 padding: '46px 32px',
+                maxWidth: {sm: 'full'},
                 width: '610px'
             }}>
                 <Grid container >
@@ -168,16 +169,16 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
                                 boxShadow: '0px 0px 40px 0px #E76316'
                             },
                         }}
-                        onClick={toggleMessage}
+                        onClick={toggleMessageCreateCard}
                     >
                         Criar card
                     </Button>
                 </Box>
 
                 <Snackbar
-                    open={openAlert}
+                    open={openAlertCreateCard}
                     autoHideDuration={6000}
-                    onClose={() => setOpenAlert(false)}
+                    onClose={() => setOpenAlertCreateCard(false)}
                     message="Note archived"
                     anchorOrigin={{
                         horizontal: "right",

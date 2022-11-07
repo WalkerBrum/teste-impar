@@ -1,9 +1,19 @@
-import Paper from '@mui/material/Paper';
-import InputBase from '@mui/material/InputBase';
-import IconButton from '@mui/material/IconButton';
+import { Paper, InputBase , IconButton} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
+import { useSearchContext } from '../../../../../context/searchContext';
+import { useState } from 'react';
+
 export const Search = () => {
+    const [value, setValue] = useState();
+
+    const { setSearchValue, searchValue } = useSearchContext();
+
+    const submit = () => {
+        if (!value) return;
+        
+        setSearchValue(value);
+    }
 
     return (
         <Paper
@@ -26,11 +36,12 @@ export const Search = () => {
                     padding:'10px'
                 }}
                 placeholder="Digite aqui sua busca..."
+                onChange={(event) => setValue(event.target.value)}
             />
                 <IconButton 
-                        type="button" 
-                        aria-label="search" 
-                        sx={{ 
+                    type="button" 
+                    aria-label="search" 
+                    sx={{ 
                         color:'#A4A4A4',  
                         height: '100%',
                         '&:hover': {
@@ -38,7 +49,8 @@ export const Search = () => {
                             color: 'black',
                             fontSize: '10px',
                         },
-                    }} 
+                    }}
+                    onClick={submit} 
                 >
                     <SearchIcon sx={{ 
                         fontSize:"50px",

@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { CreateCard } from "./create-card";
 
 import { Header } from "./header";
-import { ShowCard } from "./show-cards";
+import { ExibeCard } from "./exibe-cards";
 
-export const SearchResults = () => {
+export const List = () => {
     const [createCardOpen, setCreateCardOpen] = useState(false);
 
     const openModal = () => {
@@ -18,7 +18,7 @@ export const SearchResults = () => {
             margin: '0 auto'
         }}>
             <Header openModal={openModal} />
-            <ShowCard />
+            <ExibeCard />
             <CreateCard createCardOpen={createCardOpen} />
         </Box>
     )

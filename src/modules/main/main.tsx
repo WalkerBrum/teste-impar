@@ -1,5 +1,5 @@
 import { SearchCard } from './components/search-card';
-import { SearchResults } from './components/search-results';
+import { List } from './components/list';
 
 import { Box } from '@mui/material';
 
@@ -12,7 +12,7 @@ export const Main = () => {
             backgroundColor: '#F6F4F6'
         }}>
             <SearchCard />
-            <SearchResults />
+            <List />
         </Box>
     )
 }

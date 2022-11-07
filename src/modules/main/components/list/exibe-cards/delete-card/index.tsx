@@ -1,5 +1,7 @@
-import { Modal, Box, Typography, Button, Divider } from '@mui/material';
+import { Modal, Box, Typography, Button, Divider, Snackbar, Alert } from '@mui/material';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+
+import { useState } from 'react';
 
 interface IDeleteCardProps {
     deleteOpen: boolean;
@@ -7,7 +9,14 @@ interface IDeleteCardProps {
 }
 
 export const DeleteCard: React.FC<IDeleteCardProps> = ({ deleteOpen, handleDeleteClose }) => {
+    const [openAlertDeleteCard, setOpenAlertDeleteCard] = useState(false);
 
+    const toggleMessageDeleteCard = () => {
+        if (openAlertDeleteCard) return
+        
+        setOpenAlertDeleteCard((state: boolean) => !state);       
+    }
+    
     const style = {
         position: 'absolute',
         top: '50%',
@@ -109,7 +118,9 @@ export const DeleteCard: React.FC<IDeleteCardProps> = ({ deleteOpen, handleDelet
                             }}
                             variant="contained"
                             color="error"
-                            title="Excluir card">
+                            title="Excluir card"
+                            onClick={toggleMessageDeleteCard}
+                        >
                             Excluir
                         </Button>
 
@@ -131,8 +142,19 @@ export const DeleteCard: React.FC<IDeleteCardProps> = ({ deleteOpen, handleDelet
                             Cancelar
                         </Button>
                     </Box>
-
                 </Typography>
+                <Snackbar
+                    open={openAlertDeleteCard}
+                    autoHideDuration={6000}
+                    onClose={() => setOpenAlertDeleteCard(false)}
+                    message="Note archived"
+                    anchorOrigin={{
+                        horizontal: "center",
+                        vertical: "bottom",
+                    }}
+                >
+                    <Alert color="error">Funcionalidade não implementada</Alert>
+                </Snackbar>
             </Box>
         </Modal>
     )
