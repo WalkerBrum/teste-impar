@@ -1,14 +1,16 @@
 import { Box, Button, Typography } from "@mui/material";
 
 interface IHeaderProps {
-    openModal: () => void;
+    openModalCreateCard: () => void;
 }
 
-export const Header: React.FC<IHeaderProps> = ({ openModal }) => {
+export const Nav: React.FC<IHeaderProps> = ({ openModalCreateCard }) => {
 
     return (
         <Box sx={{
             display: "flex",
+            flexDirection: {xs: 'column', md: 'row'},
+            gap: '20px',
             alignItems: "center",
             justifyContent: "space-between",
             margin: '40px auto 0 auto'
@@ -24,13 +26,15 @@ export const Header: React.FC<IHeaderProps> = ({ openModal }) => {
             </Typography>
             <Button 
                 variant='contained'
-                onClick={openModal}
+                onClick={openModalCreateCard}
                 sx={{
                     backgroundColor:'#E76316',
                     fontSize: '18px',
                     textTransform: 'none',
-                    padding: '10px 50px',
+                    padding: '10px 30px',
                     borderRadius: '8px',
+                    height: '48px',
+                    width: {xs: '280px', sm:'173px'},
                     '&:hover': {
                         backgroundColor: '#c9520d',
                         boxShadow: '0px 0px 40px 0px #E76316'

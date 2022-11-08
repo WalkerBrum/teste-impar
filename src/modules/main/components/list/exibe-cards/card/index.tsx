@@ -1,9 +1,10 @@
-import { Box, Card, CardContent, CardActions, Button, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardActions, Button, Typography, Snackbar, Alert } from "@mui/material";
 
- import Image from 'next/image';
+import Image from 'next/image';
 import image from '../svg/icone.svg';
 import trashIcon from '../svg/Icon-trash.svg';
 import editIcon from '../svg/Icon-edit.svg';
+import { useState } from 'react';
 
 interface ICardResultProps {
     name: string;
@@ -11,16 +12,38 @@ interface ICardResultProps {
 }
 
 export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name }) => {
-    
+    const [openAlertEditCard, setOpenAlertEditCard] = useState(false);
+
+    const toggleMessageEditCard = () => {
+        if (openAlertEditCard) return
+
+        setOpenAlertEditCard((state: boolean) => !state);
+    }
+
     return (
         <Card sx={{
-            width: '234px',
+            width: {xs: '100%', sm:'205px', lg: '234px'},
             height: '267px',
             display: 'flex',
             justifyContent: 'space-between',
             flexDirection: 'column',
             borderRadius: '8px'
         }}>
+            <Snackbar
+                    open={openAlertEditCard}
+                    autoHideDuration={6000}
+                    onClose={() => setOpenAlertEditCard(false)}
+                    message="Note archived"
+                    sx={{
+                        width: "100%",
+                    }}
+                    anchorOrigin={{
+                        horizontal: "center",
+                        vertical: "top",
+                    }}
+                >
+                    <Alert color="error">Funcionalidade não implementada</Alert>
+                </Snackbar>
             <CardContent>
                 <Box sx={{
                     border: '1px solid #E4E4E4',
@@ -52,14 +75,14 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name 
                 </Typography>
             </CardContent>
 
-            <CardActions 
+            <CardActions
                 sx={{
                     display: 'flex',
                     padding: '0',
                     width: '100%',
                 }}
             >
-                <Box 
+                <Box
                     sx={{
                         display: 'flex',
                         justifyContent: 'space-between',
@@ -112,6 +135,7 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name 
                                 borderColor: '#E76316',
                             }
                         }}
+                        onClick={toggleMessageEditCard}
                     >
                         <Image
                             src={editIcon}

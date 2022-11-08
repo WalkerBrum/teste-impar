@@ -12,13 +12,13 @@ export default function handler(
 ) {
   
   res.status(200).json([
-    { id: 1, name: 'john doe' }, 
-    { id: 2, name: 'walker brum'},
-    { id: 3, name: 'patricia oliveira'},
-    { id: 4, name: 'marlon souza'},
-    { id: 5, name: 'márcio guerin'},
-    { id: 6, name: 'philipe teixeira'},
-    { id: 7, name: 'rogério cavalcante'},
-    { id: 8, name: 'henrique marques'}
+    { id: 1, name: 'John Doe' }, 
+    { id: 2, name: 'Walker Brum'},
+    { id: 3, name: 'Patricia Oliveira'},
+    { id: 4, name: 'Marlon Souza'},
+    { id: 5, name: 'Márcio Guerin'},
+    { id: 6, name: 'Philipe Teixeira'},
+    { id: 7, name: 'Rogério Cavalcante'},
+    { id: 8, name: 'Henrique Marques'}
   ])
 }

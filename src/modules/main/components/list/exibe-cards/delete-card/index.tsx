@@ -148,9 +148,12 @@ export const DeleteCard: React.FC<IDeleteCardProps> = ({ deleteOpen, handleDelet
                     autoHideDuration={6000}
                     onClose={() => setOpenAlertDeleteCard(false)}
                     message="Note archived"
+                    sx={{
+                        width: "100%",
+                    }}
                     anchorOrigin={{
                         horizontal: "center",
-                        vertical: "bottom",
+                        vertical: "top",
                     }}
                 >
                     <Alert color="error">Funcionalidade não implementada</Alert>

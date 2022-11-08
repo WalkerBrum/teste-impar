@@ -2,14 +2,18 @@ import { Box } from "@mui/material";
 import { useState } from 'react';
 import { CreateCard } from "./create-card";
 
-import { Header } from "./header";
+import { Nav } from "./nav";
 import { ExibeCard } from "./exibe-cards";
 
 export const List = () => {
     const [createCardOpen, setCreateCardOpen] = useState(false);
 
-    const openModal = () => {
+    const openModalCreateCard = () => {
         setCreateCardOpen(true);
+    }
+
+    const closeModalCreateCard = () => {
+        setCreateCardOpen(false);
     }
 
     return (
@@ -17,9 +21,9 @@ export const List = () => {
             width: "80%",
             margin: '0 auto'
         }}>
-            <Header openModal={openModal} />
+            <Nav openModalCreateCard={openModalCreateCard} />
             <ExibeCard />
-            <CreateCard createCardOpen={createCardOpen} />
+            <CreateCard createCardOpen={createCardOpen} closeModalCreateCard={closeModalCreateCard} />
         </Box>
     )
 }

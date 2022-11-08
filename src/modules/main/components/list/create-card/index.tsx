@@ -1,4 +1,5 @@
 import { Drawer, Box, Grid, Typography, Divider, InputBase, useMediaQuery, Theme, Button, Snackbar, Alert } from "@mui/material";
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 import Image from 'next/image';
 import image from './image/create-card.png';
@@ -7,9 +8,10 @@ import { useRef, useState } from 'react';
 interface ICreateCardProps {
     createCardOpen: boolean;
     Ref: boolean;
+    closeModalCreateCard: () => void
 }
 
-export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
+export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen, closeModalCreateCard }) => {
     const [openAlertCreateCard, setOpenAlertCreateCard] = useState(false);
 
     const inputRef = useRef();
@@ -25,11 +27,14 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
     };
 
     return (
-        <Drawer open={createCardOpen} anchor='right'>
+        <Drawer 
+        open={createCardOpen} 
+        anchor='right'
+        onClose={closeModalCreateCard}>
             <Box sx={{
                 padding: '46px 32px',
                 maxWidth: {sm: 'full'},
-                width: '610px'
+                width: {xs: '100%', md:'610px'}
             }}>
                 <Grid container >
                     <Grid xs={12} md={1.4} item>
@@ -58,7 +63,32 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
                             Criar Card
                         </Typography>
                     </Grid>
-
+                    <Box sx={{
+                            position: 'absolute',
+                            right: '10px',
+                            top: '50px',
+                            borderRadius: '8px',
+                            cursor: 'pointer',
+                            padding: '5px 20px',
+                            color:'#454545',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '3px',
+                            transition: 'all ease-in-out 0.6s',
+                            '&:hover': {
+                                letterSpacing: '3px',
+                                color: '#E76316',
+                                transition: 'all ease-in-out 0.6s'
+                            }
+                        }}
+                        onClick={closeModalCreateCard}
+                    >
+                        <Typography sx={{fontSize: '18px'}}
+                        >
+                            Fechar
+                        </Typography>
+                        <ArrowForwardOutlinedIcon sx={{fontSize: '18px'}}/>
+                    </Box>        
                 </Grid>
 
                 <Divider sx={{ marginTop: '30.71px' }} />
@@ -120,7 +150,7 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
                                 fontSize: '18px',
                                 marginTop: '11.78px'
                             }}
-                            placeholder="Digite aqui sua busca..."
+                            placeholder="Nenhum arquivo selecionado"
                         />
                         <Button
                             variant='outlined'
@@ -130,13 +160,15 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
                                 color: '#E76316',
                                 borderColor: '#E76316',
                                 position: 'absolute',
-                                top: '17.5px',
+                                top: {xs: '80px', lg:'17.5px'},
                                 right: '3px',
                                 borderRadius: '8px',
+                                transition: 'all ease-in-out 0.6s',
                                 '&:hover': {
                                     color: 'white',
                                     backgroundColor: '#E76316',
                                     borderColor: '#E76316',
+                                    transition: 'all ease-in-out 0.6s',
                                 }
                             }}
                         >
@@ -150,7 +182,7 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen }) => {
                     </Box>
                 </Box>
 
-                <Divider sx={{ margin: '51.22px 0 26px 0' }} />
+                <Divider sx={{ margin: { xs:'91.22px 0 26px 0', md:'51.22px 0 26px 0'} }} />
 
                 <Box sx={{
                     display: 'flex',

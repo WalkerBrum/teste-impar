@@ -13,8 +13,7 @@ export const ExibeCard = () => {
  
     const sendData = async (json: Array<object>) => {
         if (searchValue.length > 0) {
-            const filterName =  json.filter((data: {name: string, id: number}) => data.name.toLowerCase() === searchValue);
-            console.log(typeof(filterName));
+            const filterName =  json.filter((data: {name: string, id: number}) => (data.name.toLowerCase()) === (searchValue.toLowerCase()));
 
             setDataApi(
                 filterName.map((data: {name: string, id: number}) => 
@@ -51,7 +50,14 @@ export const ExibeCard = () => {
     const handleDeleteClose = () => setDeleteOpen(false);
     
     return (
-        <Box sx={{ margin: '36px 10px', display: 'flex', flexWrap: 'wrap', gap: '37px'}}>
+        <Box sx={{ 
+                margin: '36px 10px', 
+                display: 'flex',
+                justifyContent: {xs: 'center', lg: 'start'}, 
+                flexWrap: 'wrap', 
+                gap: {xs: '20px', sm:'37px'}
+            }}
+        >
             {dataApi}
             <DeleteCard deleteOpen={deleteOpen} handleDeleteClose={handleDeleteClose}/>
         </Box>
