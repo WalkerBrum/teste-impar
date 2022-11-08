@@ -7,7 +7,7 @@ import { useRef, useState } from 'react';
 
 interface ICreateCardProps {
     createCardOpen: boolean;
-    Ref: boolean;
+    ref: boolean;
     closeModalCreateCard: () => void
 }
 
