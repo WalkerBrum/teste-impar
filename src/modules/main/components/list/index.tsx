@@ -18,7 +18,7 @@ export const List = () => {
 
     return (
         <Box sx={{
-            width: "80%",
+            width: {xs: '90%', sm: '80%', lg: '70%'},
             margin: '0 auto'
         }}>
             <Nav openModalCreateCard={openModalCreateCard} />

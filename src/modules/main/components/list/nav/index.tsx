@@ -9,7 +9,7 @@ export const Nav: React.FC<IHeaderProps> = ({ openModalCreateCard }) => {
     return (
         <Box sx={{
             display: "flex",
-            flexDirection: {xs: 'column', md: 'row'},
+            flexDirection: {xs: 'column', sm: 'row'},
             gap: '20px',
             alignItems: "center",
             justifyContent: "space-between",
@@ -19,7 +19,7 @@ export const Nav: React.FC<IHeaderProps> = ({ openModalCreateCard }) => {
                 variant='h3' 
                 color='#5F1478'
                 sx={{
-                    fontSize: '32px'
+                    fontSize: {xs: '30px', md: '32px'}
                 }}
             >
                 Resultado de busca
@@ -34,7 +34,7 @@ export const Nav: React.FC<IHeaderProps> = ({ openModalCreateCard }) => {
                     padding: '10px 30px',
                     borderRadius: '8px',
                     height: '48px',
-                    width: {xs: '280px', sm:'173px'},
+                    width: {xs: '265px', sm:'173px'},
                     '&:hover': {
                         backgroundColor: '#c9520d',
                         boxShadow: '0px 0px 40px 0px #E76316'

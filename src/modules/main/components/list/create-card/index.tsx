@@ -32,9 +32,8 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen, closeMo
         anchor='right'
         onClose={closeModalCreateCard}>
             <Box sx={{
-                padding: '46px 32px',
-                maxWidth: {sm: 'full'},
-                width: {xs: '100%', md:'610px'}
+                padding: '46px 32px 0px 32px',
+                width: {xs: '100vw', sm: '100%', md:'610px'}
             }}>
                 <Grid container >
                     <Grid xs={12} md={1.4} item>
@@ -160,7 +159,7 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen, closeMo
                                 color: '#E76316',
                                 borderColor: '#E76316',
                                 position: 'absolute',
-                                top: {xs: '80px', lg:'17.5px'},
+                                top: {xs: '80px', md:'17.5px'},
                                 right: '3px',
                                 borderRadius: '8px',
                                 transition: 'all ease-in-out 0.6s',
@@ -182,7 +181,7 @@ export const CreateCard: React.FC<ICreateCardProps> = ({ createCardOpen, closeMo
                     </Box>
                 </Box>
 
-                <Divider sx={{ margin: { xs:'91.22px 0 26px 0', md:'51.22px 0 26px 0'} }} />
+                <Divider sx={{ margin: { xs:'71.22px 0 26px 0', md:'51.22px 0 26px 0'} }} />
 
                 <Box sx={{
                     display: 'flex',

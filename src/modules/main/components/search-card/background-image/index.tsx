@@ -8,14 +8,14 @@ export const BackgroundImage = () => {
     return (
         <Box sx={{
             width: '100vw',
+            height: {xs: '230px', sm:'261px'},
             overflowY: 'hidden',
             padding: '0',
         }}>
             <Image
                 src={image}
-                height={261}
                 alt='Imagem de fundo'
-                style={{width: '100%'}}
+                style={{width: '100%', height: '100%'}}
             />
         </Box>
     );

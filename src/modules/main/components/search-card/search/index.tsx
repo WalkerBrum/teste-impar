@@ -23,7 +23,7 @@ export const Search = () => {
             sx={{
                 display: 'flex',
                 alignItems: 'center',
-                width: '80%',
+                width: {xs: '90%', sm: '80%', lg: '70%'},
                 position: 'absolute',
                 height: '65px',
                 borderRadius: '8px',
