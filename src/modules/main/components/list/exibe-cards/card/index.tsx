@@ -1,17 +1,18 @@
-import { Box, Card, CardContent, CardActions, Button, Typography, Snackbar, Alert } from "@mui/material";
+import { Box, Card, CardContent, CardActions, Button, Typography, Snackbar, Alert, CardMedia } from "@mui/material";
 
 import Image from 'next/image';
-import image from '../svg/icone.svg';
+import iconePage from '../svg/icone.svg';
 import trashIcon from '../svg/Icon-trash.svg';
 import editIcon from '../svg/Icon-edit.svg';
 import { useState } from 'react';
 
 interface ICardResultProps {
     name: string;
+    imageUrl: string;
     handleDeleteOpen: () => void;
 }
 
-export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name }) => {
+export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name, imageUrl }) => {
     const [openAlertEditCard, setOpenAlertEditCard] = useState(false);
 
     const toggleMessageEditCard = () => {
@@ -22,52 +23,48 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name 
 
     return (
         <Card sx={{
-            width: {xs: '100%', sm:'205px', lg: '234px'},
-            height: '267px',
+            width: { xs: '100%', sm: '205px', lg: '220px' },
+            height: { xs: '65vh', sm:'280px'},
             display: 'flex',
             justifyContent: 'space-between',
             flexDirection: 'column',
             borderRadius: '8px'
         }}>
             <Snackbar
-                    open={openAlertEditCard}
-                    autoHideDuration={6000}
-                    onClose={() => setOpenAlertEditCard(false)}
-                    message="Note archived"
-                    sx={{
-                        width: "100%",
-                    }}
-                    anchorOrigin={{
-                        horizontal: "center",
-                        vertical: "top",
-                    }}
-                >
-                    <Alert color="error">Funcionalidade não implementada</Alert>
-                </Snackbar>
+                open={openAlertEditCard}
+                autoHideDuration={6000}
+                onClose={() => setOpenAlertEditCard(false)}
+                message="Note archived"
+                sx={{
+                    width: "100%",
+                }}
+                anchorOrigin={{
+                    horizontal: "center",
+                    vertical: "top",
+                }}
+            >
+                <Alert color="error">Funcionalidade não implementada</Alert>
+            </Snackbar>
             <CardContent>
                 <Box sx={{
-                    border: '1px solid #E4E4E4',
-                    borderRadius: '50%',
-                    width: '95px',
-                    height: '95px',
-                    backgroundColor: '#F6F4F6',
-                    margin: '28px auto 32.17px auto',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}
+                        margin: '10px auto 25px auto',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}
                 >
-                    <Image
-                        src={image}
-                        width={64}
-                        height={63}
-                        alt='Logo Create Card'
+                    <CardMedia
+                        component="img"
+                        image={imageUrl}
+                        sx={{height: {xs: '250px', sm:'130px'}, borderRadius: '8px'}}
+                        alt='Foto Cachorro'
                     />
                 </Box>
 
                 <Typography
                     sx={{
-                        fontSize: '16px',
+                        fontSize: {xs: '20px', sm: '16px'},
+                        fontWeight: 'bold',
                         textAlign: 'center',
                     }}
                 >
@@ -99,8 +96,10 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name 
                             margin: 0,
                             border: '0px solid #A2A7AA',
                             display: 'flex',
-                            justifyContent: 'space-between',
+                            justifyContent: 'center',
+                            gap: '10px',
                             alignItems: 'center',
+                            padding: '8px',
                             width: '50%',
                             '&:hover': {
                                 color: 'white',
@@ -126,7 +125,9 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name 
                             margin: 0,
                             border: '0px solid #A2A7AA',
                             display: 'flex',
-                            justifyContent: 'space-between',
+                            justifyContent: 'center',
+                            gap: '10px',
+                            padding: '8px',
                             alignItems: 'center',
                             width: '50%',
                             '&:hover': {

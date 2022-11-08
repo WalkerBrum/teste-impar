@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { CardResult } from "./card";
 import { DeleteCard } from "./delete-card";
 import { useSearchContext } from '../../../../../context/searchContext';
+import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 
 export const ExibeCard = () => {
     const [deleteOpen, setDeleteOpen] = useState(false);
@@ -13,12 +14,16 @@ export const ExibeCard = () => {
  
     const sendData = async (json: Array<object>) => {
         if (searchValue.length > 0) {
-            const filterName =  json.filter((data: {name: string, id: number}) => (data.name.toLowerCase()) === (searchValue.toLowerCase()));
+            const filterName =  json.filter(
+                (data: {name: string, id: number, image: {url: string}}) => (data.name.toLowerCase()) === (searchValue.toLowerCase())
+            );
 
             setDataApi(
                 filterName.map((data: {name: string, id: number}) => 
                     <CardResult  
-                        handleDeleteOpen={handleDeleteOpen} name={data.name}
+                        handleDeleteOpen={handleDeleteOpen} 
+                        name={data.name}
+                        imageUrl={data.image.url}
                     />
                 )
             );
@@ -28,6 +33,7 @@ export const ExibeCard = () => {
                 json.map((data: {name: string, id: number}) => 
                     <CardResult  
                         handleDeleteOpen={handleDeleteOpen} name={data.name} key={data.id}
+                        imageUrl={data.image.url}
                     />
                 )
             );
@@ -37,10 +43,10 @@ export const ExibeCard = () => {
     useEffect(() => {
 
         const fetchData = async() => {
-            const response = await fetch('/api/hello');
+            const response = await fetch('https://api.thedogapi.com/v1/breeds');
             const json = await response.json();
 
-            sendData(json)
+            sendData(json);
         }
 
         fetchData();
@@ -51,11 +57,11 @@ export const ExibeCard = () => {
     
     return (
         <Box sx={{ 
-                margin: '36px 10px', 
+                margin: '36px 0px', 
                 display: 'flex',
-                justifyContent: {xs: 'center', lg: 'start'}, 
+                justifyContent: {xs: 'center'}, 
                 flexWrap: 'wrap', 
-                gap: {xs: '20px', sm:'37px'}
+                gap: {xs: '20px', sm:'20px'}
             }}
         >
             {dataApi}
