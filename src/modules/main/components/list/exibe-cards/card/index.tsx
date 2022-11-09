@@ -24,7 +24,7 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name,
   return (
     <Card sx={{
       width: { xs: '100%', sm: '205px', lg: '220px' },
-      height: { xs: '65vh', sm:'280px'},
+      height: { xs: '50vh', sm:'280px'},
       display: 'flex',
       justifyContent: 'space-between',
       flexDirection: 'column',
@@ -56,7 +56,7 @@ export const CardResult: React.FC<ICardResultProps> = ({ handleDeleteOpen, name,
           <CardMedia
             component="img"
             image={imageUrl}
-            sx={{height: {xs: '250px', sm:'130px'}, borderRadius: '8px'}}
+            sx={{height: {xs: '200px', sm:'130px'}, borderRadius: '8px'}}
             alt='Foto Cachorro'
           />
         </Box>

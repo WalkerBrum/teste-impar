@@ -19,10 +19,10 @@ export const DeleteCard: React.FC<IDeleteCardProps> = ({ deleteOpen, handleDelet
     
   const style = {
     position: 'absolute',
-    top: '50%',
+    top: {xs: '25%', sm:'50%'},
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '434px',
+    width: {xs: '100vw', sm: '434px'},
     height: '438px',
     bgcolor: 'background.paper',
     border: '0px',
@@ -54,8 +54,8 @@ export const DeleteCard: React.FC<IDeleteCardProps> = ({ deleteOpen, handleDelet
             fontSize: '16px',
             padding: '2px',
             position: 'absolute',
-            top: '-15px',
-            right: '-15px',
+            top: {xs: '10px', sm:'-15px'},
+            right: { xs: '10px', sm:'-15px'},
             color: 'white',
             cursor: 'pointer',
             transition: '0.5s ease-out',
