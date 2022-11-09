@@ -1,7 +1,7 @@
 # **Sistema para Busca de Cards de Cachorros** 
 
 ## **Descrição** 
-Teste técnico Ímpar, aplicação front-end para interação visual com a API TheDogApi. Foram desenvolvidos Cards com imagens e nomes de raças de cachorros, onde por meio de um buscador é possível encontrar os cards digitando o seu nome de forma parcial. O Layout foi pensando de forma responsiva para funcionar em desktops, tablets e mobiles, além de possíveis novas funcionalidas, como criação de um novo card, exclusão e edição do mesmo. 
+Teste técnico empresa Ímpar, aplicação front-end para interação visual com a API TheDogApi. Foram desenvolvidos Cards com imagens e nomes de raças de cachorros, onde por meio de um buscador é possível encontrar os cards digitando o seu nome de forma parcial. O Layout foi pensando de forma responsiva para funcionar em desktops, tablets e mobiles, além de possíveis novas funcionalidas, como criação de um novo card, exclusão e edição do mesmo. 
 
 <hr>
 
@@ -26,7 +26,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ## **Requerimentos**
 - Node.js;
 - npm ou yarn;
-- Backend: [https://github.com/oneblueapp/testing_react_js/](https://github.com/oneblueapp/testing_react_js/)
+- Backend: [https://docs.thedogapi.com/](https://docs.thedogapi.com/)
 
 ## **Instalação**
 `npm install`
