@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import { CardResult } from './card';
 import { DeleteCard } from './delete-card';
 import { useSearchContext } from '../../../../../context/searchContext';
-import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
 
 export interface IDog {
     weight:             string;

@@ -1,14 +1,12 @@
 import { Paper, InputBase, Box } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
 
 import Image from 'next/image';
 import image from './image/search.png';
 import { useSearchContext } from '../../../../../context/searchContext';
-import { useState } from 'react';
 
 export const Search = () => {
 
-  const { setSearchValue, searchValue } = useSearchContext();
+  const { setSearchValue } = useSearchContext();
 
   return (
     <Paper

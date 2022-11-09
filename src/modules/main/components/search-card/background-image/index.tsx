@@ -1,4 +1,4 @@
-import { Paper, Card, CardMedia, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 
 import Image from 'next/image';
