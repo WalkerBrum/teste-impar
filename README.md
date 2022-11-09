@@ -48,10 +48,10 @@ Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o
 
 # 📷 Demonstração da Aplicação
 
-<img src="" title="Print screen da página inicial"/>
-<img src="" title="Print screen do modal de novo card"/>
-<img src="" title="Print screen do modal de exluir"/>
-<img src="" title="Print screen da páginal inicial do mobile"/>
+<img src="public/images/home-page.png" title="Print screen da página inicial"/>
+<img src="public/images/create-card.png" title="Print screen do modal de novo card"/>
+<img src="public/images/delete-card.png" title="Print screen do modal de exluir"/>
+<img src="public/images/home-page-mobile.png" title="Print screen da páginal inicial do mobile"/>
 
 
 ## **Autor e Agradecimento**
