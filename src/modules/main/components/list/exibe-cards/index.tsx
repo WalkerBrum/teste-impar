@@ -82,7 +82,7 @@ export const ExibeCard = () => {
                             key={key}
                         />)
                 ) 
-                : (
+                : searchValue && (
                     <Typography 
                         variant='h3'
                         sx={{
