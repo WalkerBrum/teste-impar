@@ -8,7 +8,7 @@ interface ISearchContextData {
 const SearchContext = createContext({} as ISearchContextData);
 
 export const useSearchContext = () => {
-    return useContext(SearchContext);
+  return useContext(SearchContext);
 };
 
 interface IAppSearchProvider {
@@ -16,14 +16,14 @@ interface IAppSearchProvider {
 }
 
 export const SearchProvider: React.FC<IAppSearchProvider> = ({ children }) => {
-    const [searchValue, setSearchValue] = useState<string>('');
+  const [searchValue, setSearchValue] = useState<string>('');
 
 
-    return (
-        <SearchContext.Provider value={{ searchValue, setSearchValue }}>
-            {children}
-        </SearchContext.Provider>
-    )
-}
+  return (
+    <SearchContext.Provider value={{ searchValue, setSearchValue }}>
+      {children}
+    </SearchContext.Provider>
+  );
+};
 
 

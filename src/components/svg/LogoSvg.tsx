@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 export const LogoSvg = () => (
   <svg
@@ -7,28 +7,28 @@ export const LogoSvg = () => (
     height={37.218}
   >
     <defs>
-      <style>{".c{fill:#fff}"}</style>
+      <style>{'.c{fill:#fff}'}</style>
     </defs>
     <text
       transform="translate(56.029 26.275)"
       style={{
         fontSize: 24,
-        fontFamily: "Muli-SemiBold,Muli",
+        fontFamily: 'Muli-SemiBold,Muli',
         fontWeight: 600,
-        fill: "#fff",
+        fill: '#fff',
       }}
     >
       <tspan x={0} y={0}>
-        {"Teste "}
+        {'Teste '}
       </tspan>
       <tspan
         y={0}
         style={{
-          fontFamily: "Muli-Light,Muli",
+          fontFamily: 'Muli-Light,Muli',
           fontWeight: 300,
         }}
       >
-        {"\xCDmpar "}
+        {'\xCDmpar '}
       </tspan>
     </text>
     <path
@@ -40,6 +40,6 @@ export const LogoSvg = () => (
       d="M18.609.484a18.292 18.292 0 0 0-4.1.483 18.1 18.1 0 0 0-2.547 7.675 3.9 3.9 0 0 1 1.288-.2l11.386.055a4.073 4.073 0 0 1 4.025 4.09l-.072 11.367a4.069 4.069 0 0 1-3.059 3.908 17.983 17.983 0 0 0 8.585.081A18.09 18.09 0 0 0 18.609.484Z"
     />
   </svg>
-)
+);
 
 export default LogoSvg;

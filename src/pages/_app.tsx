@@ -17,4 +17,4 @@ export default function App({ Component, pageProps }: AppProps) {
       </CssBaseline>
     </SearchProvider>  
   );
-};
+}
