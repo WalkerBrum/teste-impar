@@ -6,7 +6,7 @@ Teste técnico empresa Ímpar, aplicação front-end para interação visual com
 <hr>
 
 ## **Acessar Aplicação**
-[Deploy Teste Ímpar](https://teste-impar-4mpm1ga5a-walkerbrum.vercel.app/)
+[Deploy Teste Ímpar](https://https://teste-impar-plum.vercel.app/)
 
 <hr>
 
