@@ -31,7 +31,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ## **Instalação**
 `npm install`
 
-## Começando
+## Start Projeto
 
 Primeiro, execute o servidor de desenvolvimento:
 

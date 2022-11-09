@@ -19,6 +19,7 @@ export const Nav: React.FC<IHeaderProps> = ({ openModalCreateCard }) => {
         variant='h3' 
         color='#5F1478'
         sx={{
+          fontWeight: 'bold',
           fontSize: {xs: '30px', md: '32px'}
         }}
       >
