@@ -1,4 +1,4 @@
-import { Drawer, Box, Grid, Typography, Divider, InputBase, useMediaQuery, Theme, Button, Snackbar, Alert } from '@mui/material';
+import { Drawer, Box, Grid, Typography, Divider, InputBase, Button, Snackbar, Alert } from '@mui/material';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 import Image from 'next/image';

@@ -1,7 +1,6 @@
 import { Box, Card, CardContent, CardActions, Button, Typography, Snackbar, Alert, CardMedia } from '@mui/material';
 
 import Image from 'next/image';
-import iconePage from '../svg/icone.svg';
 import trashIcon from '../svg/Icon-trash.svg';
 import editIcon from '../svg/Icon-edit.svg';
 import { useState } from 'react';
