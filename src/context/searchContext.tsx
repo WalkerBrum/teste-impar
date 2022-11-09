@@ -1,4 +1,4 @@
-import { createContext, useContext,  useState } from 'react';
+import { createContext, useContext, useCallback, useState } from 'react';
 
 interface ISearchContextData {
     searchValue: string;
